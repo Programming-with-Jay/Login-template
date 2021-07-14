@@ -1,0 +1,141 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("background.png");
+}
+body {
+  display: grid;
+  place-items: center;
+}
+.login {
+  min-width: 700px;
+  max-width: 1000px;
+  max-height: 700px;
+  height: 85vh;
+  margin-top: 50px;
+  width: 100%;
+  border-radius: 10px;
+  position: relative;
+  background-color: white;
+  animation-name: example;
+  animation-duration: 7s;
+}
+.line {
+  height: 500px;
+  border-width: 0;
+  width: 2px;
+  color: gray;
+  background-color: gray;
+  transform: translate(400px, 60px);
+}
+.female-avatar {
+  transform: translate(100px, -450px);
+  position: relative;
+  animation-name: example_1;
+  animation-duration: 7s;
+}
+.male-avatar {
+  transform: translate(100px, -400px);
+  position: relative;
+  animation-name: example_1;
+  animation-duration: 7s;
+
+}
+img{
+  max-width: 220px ;
+  max-height: 200px;
+}
+.male-avatar {
+  max-width: 220px;
+  max-height: 200px;
+}
+
+.female-avatar :hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.male-avatar :hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+input[type="radio"]:checked + label > img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.input-hidden {
+  position: absolute;
+  left: -9999px;
+}
+input[type=text] {
+  width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border-radius: 100px;
+  outline: none;
+}
+.email{
+  transform: translate(460px,-750px);
+}
+.password{
+  transform: translate(460px,-700px);
+}
+.submit{
+  transform: translate(530px,-550px);
+  position: relative;
+  animation-name: example_2;
+  animation-duration: 7s;
+}
+.name{
+  transform: translate(460px,-710px);
+}
+input[type=submit] {
+  width: 30%;
+  background-color: #7CB9E8;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #00308F;
+}
+@keyframes example {
+  0% {
+    left: 0px;
+    top: 500px;
+  }
+  25% {
+    left: 0px;
+    top: 0px;
+  }
+}
+@keyframes example_1 {
+  0% {
+    right: 500px;
+    top: 0px;
+  }
+  50% {
+    right: 0px;
+    top: 0px;
+  }
+}
+@keyframes example_2 {
+  0% {
+    left: 500px;
+    top: 0px;
+  }
+  25% {
+    left: 0px;
+    top: 0px;
+  }
+}
+@media screen and (max-width: 1060px) {
+  #primary { width:67%; }
+  #secondary { width:30%; margin-left:3%;}  
+}
+
+/* Media Queries: Tabled Portrait */
+@media screen and (max-width: 768px) {
+  #primary { width:100%; }
+  #secondary { width:100%; margin:0; border:none; }
+}
